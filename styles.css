@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rosybrown;
+    line-height: 1.4;
+    justify-content: center;
+    align-items: center;
+}
+
+.cslog-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: navy;
+    color: #333333;
+    align-items: center;
+    border-radius: 40px;
+    padding: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#humanScore {
+    font-size: 2rem;
+    font-weight: bold;
+    color: ghostwhite;
+}
+
+#computerScore {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: red;
+}
+
+#roundTable {
+    font-size: 1.5rem;
+    margin-right: 50px;
+    margin-left: 40px;
+    font-weight: bold;
+    padding: 5px;
+    background-color: rgba(230, 120, 87, 0.9);
+    border-radius: 10px;
+    color: ghostwhite;
+}
+
+.btn-container {
+    display: flex;
+    gap: 10px;
+}
+
+.rock-btn, .scissors-btn, .paper-btn {
+    border: none;
+    cursor: pointer;
+}
+
+.rock-btn {
+    padding: 15px;
+    background-color: #7f8386;
+    color: ghostwhite;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.scissors-btn {
+    padding: 15px;
+    background-color: #FF1d8d;
+    color: ghostwhite;
+    font-weight: 500;
+    border-radius: 10px;
+
+}
+
+.paper-btn {
+    padding: 15px;
+    background-color: ghostwhite;
+    color: #333;
+    font-weight: 500;
+    border-radius: 10px;
+}
