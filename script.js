@@ -6,19 +6,19 @@ const rockBtn = document.getElementById("rock");
 const scissorsBtn =  document.getElementById("scissors");
 const paperBtn =  document.getElementById("paper");
 const roundEl = document.querySelector("#roundTable");
-const totalRound =  10;
-let currentRound = 1;
+let currentRound = 0;
+const resultEl = document.querySelector("#result");
 
 rockBtn.addEventListener("click", () => {
-    playRound(getComputerChoice(), "rock");
+    playRound("rock", getComputerChoice());
 })
 
 scissorsBtn.addEventListener("click", () => {
-    playRound(getComputerChoice(), "scissors");
+    playRound("scissors", getComputerChoice());
 })
 
 paperBtn.addEventListener("click", () => {
-    playRound(getComputerChoice(), "paper");
+    playRound("paper", getComputerChoice());
 })
 
 function getComputerChoice() {
@@ -28,9 +28,8 @@ function getComputerChoice() {
 
 }
 
-function playRound(computerChoice, humanChoice) {
+function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
-    const resultEl = document.querySelector("#result");
 
     if(humanChoice === computerChoice) {
         resultEl.textContent = "it's a tie, unfortunately no winner, *sigh* disappointed"
@@ -51,7 +50,7 @@ function playRound(computerChoice, humanChoice) {
 
     currentRound++;
     roundEl.textContent = `Round: ${currentRound}`;
-    if(currentRound === totalRound) {
+    if(humanScore === 5 || computerScore === 5) {
         if (humanScore > computerScore) {
             resultEl.textContent = "CONGRATULATIONS! YEAH YEAH YOU WIN! ANYWAY NEXT GAME?";
             resultEl.style.color = "green";
